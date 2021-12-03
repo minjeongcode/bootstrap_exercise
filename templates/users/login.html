@@ -1,0 +1,49 @@
+{% extends 'users/base.html' %}
+    {% load static %}
+    {% block link %}
+    <link href="{% static 'bootstrap/css/signin.css' %}" rel="stylesheet" />
+    {% endblock %}
+  </head>
+  {% block content %}
+  <body class="text-center">
+    <main class="form-signin">
+      <form method="POST">
+        {% csrf_token %}
+        <h1 class="h1 mb-5 me-2 fw-normal">건설영상 CCTV 플랫폼</h1>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="floatingInput"
+            name="username"
+            placeholder="아이디"
+          />
+          <label for="floatingInput">아이디</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            name="password"
+            placeholder="비밀번호"
+          />
+          <label for="floatingPassword">비밀번호</label>
+        </div>
+
+        <button class="w-100 mt-2 mb-3 btn btn-lg btn-primary" type="submit">
+          로그인
+        </button>
+        <a
+          href="http://127.0.0.1:8000/users/signup"
+          class="link-dark text-muted" 
+          data-toggle="modal"
+          data-target="#modalSignin"
+          >회원가입</a
+        >
+      </form>
+    </main>
+  </body>
+  {% endblock %}
