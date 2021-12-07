@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'bootstrap5',
+    'bootstrap4',
     'users',
     'six'
 ]

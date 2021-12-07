@@ -1,0 +1,57 @@
+{% extends 'safeinfo/base.html' %}
+{% load static %}
+
+{% block navtitle %}
+CCTV
+{% endblock %}
+
+          {% block content %}
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            <!-- Page Heading -->
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">PART A</h1>
+            </div>
+
+            <!-- Content Row -->          
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <a href="http://127.0.0.1:8000/safeinfo/cctv_category">
+                  <video class="img-fluid" autoplay controls loop>
+                    <source src="{% static 'assets/video/Christmas - 98981.mp4' %}" type="video/mp4">
+                  </video>
+                </a>
+              </div>
+              <div class="col-md-6 mb-3">
+                <video class="img-fluid" autoplay controls loop>
+                  <source src="{% static 'assets/video/Christmas - 99607.mp4' %}" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-md-6 mb-3">
+                <video class="img-fluid" autoplay controls loop>
+                  <source src="{% static 'assets/video/Globe - 98980.mp4' %}" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-md-6">
+                <video class="img-fluid" autoplay controls loop>
+                  <source src="{% static 'assets/video/Snowing - 98377.mp4' %}" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-md-6">
+                <video class="img-fluid" autoplay controls loop>
+                  <source src="{% static 'assets/video/Sunrise - 83880.mp4' %}" type="video/mp4">
+                </video>
+              </div>
+              <div class="col-md-6">
+                <video class="img-fluid" autoplay controls loop>
+                  <source src="{% static 'assets/video/Trees - 93826.mp4' %}" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- End of Main Content -->
+        {% endblock %}
+        
