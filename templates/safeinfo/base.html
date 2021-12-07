@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>건설영상 CCTV 플랫폼</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="{% static 'fontawesome-free/css/all.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link
+      href="{% static 'sb_admin/css/sb-admin-2.min.css' %}"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="
+              navbar navbar-expand navbar-light
+              bg-white
+              topbar
+              mb-4
+              static-top
+              shadow
+            "
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">{% block navtitle %}Summary{% endblock %}</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mt-1 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/safeinfo/summary"
+                      >Summary</a
+                    >
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="http://127.0.0.1:8000/safeinfo/cctv"
+                        id="navbarDropdown"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        CCTV
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="http://127.0.0.1:8000/safeinfo/cctv">PART A</a></li>
+                        <li>
+                          <a class="dropdown-item" href="http://127.0.0.1:8000/safeinfo/cctv">PART B</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Data</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    >admin</span
+                  >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="{% static 'assets/img/undraw_profile.svg' %}"
+                  />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div
+                  class="
+                    dropdown-menu dropdown-menu-right
+                    shadow
+                    animated--grow-in
+                  "
+                  aria-labelledby="userDropdown"
+                >
+                  <a
+                    class="dropdown-item"
+                    href="http://127.0.0.1:8000/users"
+                    {% comment %} data-toggle="modal"
+                    data-target="#logoutModal" {% endcomment %}
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+{% block content %}
+{% endblock %}
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span><strong>주소</strong>&nbsp;&nbsp;&nbsp;경기도 수원시 장안구 서부로 2066, 산학협력센터 85201호 <br>
+                <strong>운영기관</strong>&nbsp;&nbsp;&nbsp;&#40;주&#41;스마트인사이드AI <br>
+                <strong>연락처</strong>&nbsp;&nbsp;&nbsp;031-290-7533 <br><br>
+                Copyright &copy; Smartinside 2021</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+      </div>
+      <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.4.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'sb_admin/js/sb-admin-2.min.js' %}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{% static 'chart.js/Chart.min.js' %}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{% static 'sb_admin/js/demo/chart-area-demo.js' %}"></script>
+    <script src="{% static 'sb_admin/js/demo/chart-pie-demo.js' %}"></script>
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>
