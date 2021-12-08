@@ -119,7 +119,11 @@ CCTV
           </div>
         <!-- End of Main Content -->
         {% endblock %}
+
         {% block script %}
+        <!-- Page level plugins -->
+        <script src="{% static 'jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'chart.js/Chart.min.js' %}"></script>
         <script src="{% static 'sb_admin/js/demo/chart-bar-demo.js' %}"></script>
         {% endblock %}
         

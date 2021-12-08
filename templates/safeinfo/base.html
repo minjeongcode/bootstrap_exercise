@@ -29,6 +29,8 @@
       href="{% static 'sb_admin/css/sb-admin-2.min.css' %}"
       rel="stylesheet"
     />
+    {% block link %}
+    {% endblock %}
   </head>
 
   <body id="page-top">
@@ -90,7 +92,7 @@
                     </li>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Data</a>
+                    <a class="nav-link" href="http://127.0.0.1:8000/safeinfo/data">Data</a>
                   </li>
                 </ul>
               </div>
@@ -170,7 +172,6 @@
     </a>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{% static 'jquery/jquery.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.4.js' %}"></script>
 
@@ -179,13 +180,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{% static 'sb_admin/js/sb-admin-2.min.js' %}"></script>
-
-    <!-- Page level plugins -->
-    <script src="{% static 'chart.js/Chart.min.js' %}"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{% static 'sb_admin/js/demo/chart-area-demo.js' %}"></script>
-    <script src="{% static 'sb_admin/js/demo/chart-pie-demo.js' %}"></script>
     {% block script %}
     {% endblock %}
   </body>
