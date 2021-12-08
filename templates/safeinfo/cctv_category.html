@@ -1,129 +1,158 @@
-{% extends 'safeinfo/base.html' %}
-{% load static %}
+{% extends 'safeinfo/base.html' %} {% load static %} {% block navtitle %} CCTV
+{% endblock %} {% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">PART A</h1>
+  </div>
 
-{% block navtitle %}
-CCTV
-{% endblock %}
+  <!-- Content Row -->
+  <div class="row">
+    <div class="col-md-8">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+        data-interval="false"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        </ol>
 
-          {% block content %}
-          <!-- Begin Page Content -->
-          <div class="container-fluid">
-            <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-between mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800">PART A</h1>
-            </div>
-
-            <!-- Content Row -->          
-            <div class="row">
-              <div class="col-md-8">
-                <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-
-                  <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-                  </ol>
-
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Christmas - 98981.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="carousel-item">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Christmas - 99607.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="carousel-item">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Globe - 98980.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="carousel-item">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Snowing - 98377.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="carousel-item">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Sunrise - 83880.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                    <div class="carousel-item">
-                      <video class="img-fluid" autoplay controls loop>
-                        <source src="{% static 'assets/video/Trees - 93826.mp4' %}" type="video/mp4">
-                      </video>
-                    </div>
-                  </div>
-
-                  <a class="carousel-control-prev" role="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
-                  <a class="carousel-control-next" role="button" data-target="#carouselExampleIndicators" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                <div class="card shadow mb-4">
-                  <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
-                  </div>
-                  <div class="card-body">
-                    <div class="chart-bar">
-                      <canvas id="myBarChart"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-12 card shadow my-4">
-                <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table table-bordered text-center" width="100%" cellspacing="0">
-                      <thead>
-                        <tr>
-                          <th></th>
-                          <th>마스크</th>
-                          <th>헬멧</th>
-                          <th>안전벨트</th>
-                          <th>안전화</th>
-                          <th>장갑</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>위반</th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <!-- /.container-fluid -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Christmas - 98981.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
           </div>
-        <!-- End of Main Content -->
-        {% endblock %}
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Christmas - 99607.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Globe - 98980.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Snowing - 98377.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Sunrise - 83880.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video class="img-fluid" autoplay controls loop>
+              <source
+                src="{% static 'assets/video/Trees - 93826.mp4' %}"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
 
-        {% block script %}
-        <!-- Page level plugins -->
-        <script src="{% static 'jquery/jquery.min.js' %}"></script>
-        <script src="{% static 'chart.js/Chart.min.js' %}"></script>
-        <script src="{% static 'sb_admin/js/demo/chart-bar-demo.js' %}"></script>
-        {% endblock %}
-        
+        <a
+          class="carousel-control-prev"
+          role="button"
+          data-target="#carouselExampleIndicators"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a
+          class="carousel-control-next"
+          role="button"
+          data-target="#carouselExampleIndicators"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow mb-4">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary">Bar Chart</h6>
+        </div>
+        <div class="card-body">
+          <div class="chart-bar">
+            <canvas id="myBarChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 card shadow my-4">
+      <div class="card-body">
+        <div class="table-responsive">
+          <table
+            class="table table-bordered text-center"
+            width="100%"
+            cellspacing="0"
+          >
+            <thead>
+              <tr>
+                <th></th>
+                <th>마스크</th>
+                <th>헬멧</th>
+                <th>안전벨트</th>
+                <th>안전화</th>
+                <th>장갑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>위반</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container-fluid -->
+</div>
+<!-- End of Main Content -->
+{% endblock %} {% block script %}
+<!-- Page level plugins -->
+<script src="{% static 'jquery/jquery.min.js' %}"></script>
+<script src="{% static 'chart.js/Chart.min.js' %}"></script>
+<script src="{% static 'sb_admin/js/demo/chart-bar-demo.js' %}"></script>
+{% endblock %}
