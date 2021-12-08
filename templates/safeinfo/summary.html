@@ -100,7 +100,7 @@
                     "
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Earnings Overview
+                      안전도
                     </h6>
                     <div class="dropdown no-arrow">
                     </div>
@@ -129,7 +129,7 @@
                     "
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Revenue Sources
+                      위반 항목
                     </h6>
                     <div class="dropdown no-arrow">
                     </div>
@@ -228,5 +228,13 @@
           <!-- /.container-fluid -->
         </div>
         <!-- End of Main Content -->
+        {% endblock %}
+
+        {% block script %}
+        <!-- Page level custom scripts -->
+        <script src="{% static 'jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'chart.js/Chart.min.js' %}"></script>
+        <script src="{% static 'sb_admin/js/demo/chart-area-demo.js' %}"></script>
+        <script src="{% static 'sb_admin/js/demo/chart-pie-demo.js' %}"></script>
         {% endblock %}
         

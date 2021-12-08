@@ -5,4 +5,5 @@ urlpatterns = [
     path('/summary', views.summary),
     path('/cctv', views.cctv),
     path('/cctv_category', views.cctv_category),
+    path('/data', views.data),
 ]

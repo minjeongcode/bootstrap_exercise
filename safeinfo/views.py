@@ -17,3 +17,9 @@ def cctv_category(request):
         request,
         'safeinfo/cctv_category.html'
     )
+    
+def data(request):
+    return render(
+        request,
+        'safeinfo/data.html'
+    )

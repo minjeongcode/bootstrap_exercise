@@ -1,0 +1,131 @@
+{% extends 'safeinfo/base.html' %}
+{% load static %}
+
+{% block link %}
+<link href="{% static 'datepicker/css/bootstrap-datepicker.min.css' %}" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js" integrity="sha512-k6/Bkb8Fxf/c1Tkyl39yJwcOZ1P4cRrJu77p83zJjN2Z55prbFHxPs9vN7q3l3+tSMGPDdoH51AEU8Vgo1cgAA==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css" integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg==" crossorigin="anonymous" />
+{% endblock %}
+
+{% block navtitle %}
+Data
+{% endblock %}
+
+          {% block content %}
+
+        <!-- start container-fluid -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4"/>
+                        <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker4').datetimepicker({
+                        format: 'YYYY/MM/DD'
+                    });
+                });
+            </script>
+        </div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">
+                위반 건수
+              </h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table
+                  class="table table-bordered text-center"
+                  id="dataTable"
+                  width="100%"
+                  cellspacing="0"
+                >
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>마스크</th>
+                      <th>헬멧</th>
+                      <th>안전벨트</th>
+                      <th>안전화</th>
+                      <th>장갑</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td>A-1</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>A-2</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>A-3</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>A-4</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>A-5</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>A-6</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- table end -->
+        </div>
+        <!-- /.container-fluid -->
+        
+        <!-- End of Main Content -->
+        {% endblock %}
+        
+        {% block script %}
+        <script src="{% static 'datepicker/js/bootstrap-datepicker.min.js' %}"></script>
+        <script src="{% static 'datepicker/locales/bootstrap-datepicker.ko.min.js' %}"></script>
+        {% endblock %}
+      

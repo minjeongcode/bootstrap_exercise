@@ -33,13 +33,34 @@ var ctx = document.getElementById("myBarChart");
 var myBarChart = new Chart(ctx, {
   type: "bar",
   data: {
-    labels: ["January", "February", "March", "April", "May", "June", "ex"],
+    labels: ["1", "2", "3", "4", "5", "6", "7"],
     datasets: [
       {
-        label: "Revenue",
+        label: "마스크",
         backgroundColor: "#4e73df",
         hoverBackgroundColor: "#2e59d9",
         borderColor: "#4e73df",
+        data: [4215, 5312, 6251, 7841, 9821, 14984, 1000],
+      },
+      {
+        label: "헬멧",
+        backgroundColor: "#1cc88a",
+        hoverBackgroundColor: "#17a673",
+        borderColor: "#1cc88a",
+        data: [4215, 5312, 6251, 7841, 9821, 14984, 1000],
+      },
+      {
+        label: "안전벨트",
+        backgroundColor: "#f6c23e",
+        hoverBackgroundColor: "#dda20a",
+        borderColor: "#f6c23e",
+        data: [4215, 5312, 6251, 7841, 9821, 14984, 1000],
+      },
+      {
+        label: "안전화",
+        backgroundColor: "#36b9cc",
+        hoverBackgroundColor: "#2c9faf",
+        borderColor: "#36b9cc",
         data: [4215, 5312, 6251, 7841, 9821, 14984, 1000],
       },
     ],
@@ -79,7 +100,7 @@ var myBarChart = new Chart(ctx, {
             padding: 10,
             // Include a dollar sign in the ticks
             callback: function (value, index, values) {
-              return "$" + number_format(value);
+              return number_format(value);
             },
           },
           gridLines: {
@@ -111,7 +132,7 @@ var myBarChart = new Chart(ctx, {
         label: function (tooltipItem, chart) {
           var datasetLabel =
             chart.datasets[tooltipItem.datasetIndex].label || "";
-          return datasetLabel + ": $" + number_format(tooltipItem.yLabel);
+          return datasetLabel + " " + number_format(tooltipItem.yLabel);
         },
       },
     },
